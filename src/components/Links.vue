@@ -71,6 +71,7 @@ const siteIcon = {
   Fire,
   LaptopCode,
   Gamepad,
+  Tool,
 };
 
 // 链接跳转
