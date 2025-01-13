@@ -43,10 +43,10 @@
 <script setup>
 import { Icon } from "@vicons/utils";
 // 可前往 https://www.xicons.org 自行挑选并在此处引入
-import { Link, Blog, CompactDisc, Cloud, Compass, Book, Fire, Gamepad, Tool, LaptopCode } from "@vicons/fa"; // 注意使用正确的类别
+import { Link, Blog, CompactDisc, Cloud, Compass, Book, Fire, LaptopCode ,Gamepad } from "@vicons/fa"; // 注意使用正确的类别
 import { mainStore } from "@/store";
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { Pagination, Mousewheel } from "swiper/modules";
+import { Pagination, Mousewheel } from "swiper";
 import siteLinks from "@/assets/siteLinks.json";
 
 const store = mainStore();
@@ -63,7 +63,7 @@ const siteLinksList = computed(() => {
 
 // 网站链接图标
 const siteIcon = {
- Blog,
+  Blog,
   Cloud,
   CompactDisc,
   Compass,
@@ -71,7 +71,6 @@ const siteIcon = {
   Fire,
   LaptopCode,
   Gamepad,
-  Tool,
 };
 
 // 链接跳转
@@ -111,22 +110,14 @@ onMounted(() => {
       height: 100%;
     }
     .swiper-pagination {
-      margin-top: 12px;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
+      position: static;
+      margin-top: 4px;
       :deep(.swiper-pagination-bullet) {
         background-color: #fff;
-        width: 20px;
+        width: 18px;
         height: 4px;
-        margin: 0 4px;
         border-radius: 4px;
-        opacity: 0.2;
         transition: opacity 0.3s;
-        &.swiper-pagination-bullet-active {
-          opacity: 1;
-        }
         &:hover {
           opacity: 1;
         }
